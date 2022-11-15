@@ -3,10 +3,7 @@ using System.Windows;
 
 namespace SoftwarePSpiking
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
 
         public MainWindow()
@@ -14,9 +11,10 @@ namespace SoftwarePSpiking
             InitializeComponent();
             Spikes sss = new Spikes
             {
-                NumSpikes = 120
+                NumSpikes = 12
             };
             this.DataContext = sss;
+
         }
 
 
@@ -32,17 +30,6 @@ namespace SoftwarePSpiking
         {
             SpikeVisual visualizador = new SpikeVisual();
             visualizador.Show();
-
-            //Window1 window1 = new Window1();
-            //window1.Show();
-
-            //for (int i = 0; i < int.Parse(SpikeCounter.Text); i++)
-            //{
-            //    PathGeometry Unicospike = new PathGeometry();
-            //    Unicospike = spikesVisual.UniqueSpike;
-            //    Canvas.SetLeft(Unicospike, 180);
-            //    Canvas.SetTop(Unicospike, 190);
-            //}
         }
     }
 }

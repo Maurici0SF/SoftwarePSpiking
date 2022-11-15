@@ -12,11 +12,7 @@ namespace SoftwarePSpiking
         private int dcoordY1;
         private int dcoordX2;
         private int dcoordY2;
-
-        public int CiclosParaSpike;
-        Spikes spikess = new Spikes();
-       
-
+        //public int ciclosParaSpike;
         public int ICoordX1
         {
             get { return icoordX1; }
@@ -97,14 +93,22 @@ namespace SoftwarePSpiking
             }
         }
 
+        //public int CiclosParaSpike
+        //{
+        //    get { return ciclosParaSpike; }
+        //    set { ciclosParaSpike = value; }
+        //}
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {
-            if(PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         }
+
+        //public void SetValueNumSpikes(Spikes spikes)
+        //{
+        //    CiclosParaSpike = spikes.NumSpikes;
+        //}
     }
 }

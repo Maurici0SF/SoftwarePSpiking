@@ -68,6 +68,11 @@
                 <!--  <ContentControl Canvas.Bottom="150" ContentTemplate="{StaticResource Izq}"  -->
                 <Line Canvas.Bottom="225" Style="{StaticResource Izq}" />
                 <Line Canvas.Bottom="225" Style="{StaticResource Der}" />
+                <!--<TextBox
+                    Width="50"
+                    Height="50"
+                    FontSize="20"
+                    Text="{Binding Path=selected_dept}" />-->
             </Canvas>
         </Border>
     </Grid>

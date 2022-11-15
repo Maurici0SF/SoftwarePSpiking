@@ -14,8 +14,8 @@ namespace SoftwarePSpiking
             InitializeComponent();
             DimensionSpike dimensionSpike = new DimensionSpike()
             {
-                ICoordX1 =0 ,
-                ICoordY1 =50 ,
+                ICoordX1 =0,
+                ICoordY1 =50,
                 ICoordX2 =10,
                 ICoordY2 =20,
                 DCoordX1 =20,
@@ -25,5 +25,6 @@ namespace SoftwarePSpiking
             };
             this.DataContext = dimensionSpike;
         }
+
     }
 }
