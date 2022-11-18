@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:SoftwarePSpiking"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     Title="SpikeVisual"
     Width="800"
     Height="450"
@@ -68,11 +68,11 @@
                 <!--  <ContentControl Canvas.Bottom="150" ContentTemplate="{StaticResource Izq}"  -->
                 <Line Canvas.Bottom="225" Style="{StaticResource Izq}" />
                 <Line Canvas.Bottom="225" Style="{StaticResource Der}" />
-                <!--<TextBox
+                <TextBox
                     Width="50"
                     Height="50"
                     FontSize="20"
-                    Text="{Binding Path=selected_dept}" />-->
+                    Text="{Binding Path=nSpikes}" />
             </Canvas>
         </Border>
     </Grid>

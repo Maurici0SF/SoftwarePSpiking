@@ -1,6 +1,5 @@
-﻿using System.Windows;
-using System.Windows.Data;
-using System.Windows.Shapes;
+﻿using Hangfire.Annotations;
+using System.Windows;
 
 namespace SoftwarePSpiking
 {
@@ -9,8 +8,10 @@ namespace SoftwarePSpiking
     /// </summary>
     public partial class SpikeVisual : Window
     {
-        public SpikeVisual()
+        public int nSpikes;
+        public SpikeVisual(int NumeroSpikes)
         {
+            
             InitializeComponent();
             DimensionSpike dimensionSpike = new DimensionSpike()
             {
@@ -24,6 +25,8 @@ namespace SoftwarePSpiking
                 DCoordY2 =20
             };
             this.DataContext = dimensionSpike;
+            nSpikes = NumeroSpikes;
+            //this.DataContext = this;
         }
 
     }
