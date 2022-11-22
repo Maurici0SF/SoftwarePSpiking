@@ -6,16 +6,18 @@ namespace SoftwarePSpiking
 {
     public partial class MainWindow : Window
     {
-        public int nSpikes;
+        //public string sSpikes;
+        public int a;
         public MainWindow()
         {
             InitializeComponent();
             Spikes sss = new Spikes
             {
-                NumSpikes = 12
+                NumSpikes = 3
             };
             this.DataContext = sss;
-            nSpikes = sss.NumSpikes;
+            //sSpikes = sss.SnumSpikes;
+            a = sss.NumSpikes;
         }
 
 
@@ -29,7 +31,7 @@ namespace SoftwarePSpiking
 
         private void BotonPopUp_Click(object sender, RoutedEventArgs e)
         {
-            SpikeVisual visualizador = new SpikeVisual(nSpikes);
+            SpikeVisual visualizador = new SpikeVisual(a);
             visualizador.Show();
         }
     }
