@@ -16,6 +16,7 @@ namespace SoftwarePSpiking
         //public int DrecorredorX1;
         //public int DrecorredorX2;
         public int recorredorX;
+        public List<DimensionSpike> cantidadSpikes { get; set; }
 
         public SpikeVisual(int a)
         {
@@ -26,23 +27,37 @@ namespace SoftwarePSpiking
             //DrecorredorX2 = 0;
             InitializeComponent();
             //Generador de spikes con n cantidad solicitada
-            List<DimensionSpike> cantidadSpikes = new List<DimensionSpike>(a);
+            //List<DimensionSpike> cantidadSpikes = new List<DimensionSpike>(a);
             for (int i = 0; i < a; i++)
-            {   
-                cantidadSpikes.Add(new DimensionSpike()
+            {
+                cantidadSpikes = new List<DimensionSpike>
                 {
-                    ICoordX1 = 0 + recorredorX,
-                    ICoordY1 = 50,
-                    ICoordX2 = 10 + recorredorX,
-                    ICoordY2 = 20,
-                    DCoordX1 = 20 + recorredorX,
-                    DCoordY1 = 50,
-                    DCoordX2 = 10 + recorredorX,
-                    DCoordY2 = 20
+                    new DimensionSpike
+                    {
+                        ICoordX1 = 0 + recorredorX,
+                        ICoordY1 = 50,
+                        ICoordX2 = 10 + recorredorX,
+                        ICoordY2 = 20,
+                        DCoordX1 = 20 + recorredorX,
+                        DCoordY1 = 50,
+                        DCoordX2 = 10 + recorredorX,
+                        DCoordY2 = 20
+                    }
                 };
+                //cantidadSpikes.Add(new DimensionSpike()
+                //{
+                //    ICoordX1 = 0 + recorredorX,
+                //    ICoordY1 = 50,
+                //    ICoordX2 = 10 + recorredorX,
+                //    ICoordY2 = 20,
+                //    DCoordX1 = 20 + recorredorX,
+                //    DCoordY1 = 50,
+                //    DCoordX2 = 10 + recorredorX,
+                //    DCoordY2 = 20
+                //};
 
                 recorredorX += 20;
-                this.DataContext = cantidadSpikes;
+                //this.DataContext = cantidadSpikes;
             }
 
 
